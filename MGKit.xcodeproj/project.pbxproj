@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		EEA512E01372A5050092A7DA /* MGKit-Install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = EEA512E11372A5050092A7DA /* Build configuration list for PBXAggregateTarget "MGKit-Install" */;
+			buildPhases = (
+				EEA512FC1372A68F0092A7DA /* Install Framework */,
+			);
+			dependencies = (
+				EE89C3A013A9F064004C1FB9 /* PBXTargetDependency */,
+			);
+			name = "MGKit-Install";
+			productName = "MGKit-Install";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		EE89C39413A9EF9A004C1FB9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA512A91372A3FC0092A7DA /* Cocoa.framework */; };
+		EE89C3A113A9F0AA004C1FB9 /* ICUTemplateMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = EEA512BB1372A4320092A7DA /* ICUTemplateMatcher.h */; settings = {ATTRIBUTES = (); }; };
+		EE89C3A213A9F0AA004C1FB9 /* MGKit.h in Headers */ = {isa = PBXBuildFile; fileRef = EEA512BD1372A4320092A7DA /* MGKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EE89C3A313A9F0AA004C1FB9 /* MGTemplateEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = EEA512BE1372A4320092A7DA /* MGTemplateEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EE89C3A413A9F0AA004C1FB9 /* MGTemplateFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = EEA512C01372A4320092A7DA /* MGTemplateFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EE89C3A513A9F0AA004C1FB9 /* MGTemplateMarker.h in Headers */ = {isa = PBXBuildFile; fileRef = EEA512C11372A4320092A7DA /* MGTemplateMarker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EE89C3A613A9F0AA004C1FB9 /* MGTemplateStandardFilters.h in Headers */ = {isa = PBXBuildFile; fileRef = EEA512C21372A4320092A7DA /* MGTemplateStandardFilters.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EE89C3A713A9F0AA004C1FB9 /* MGTemplateStandardMarkers.h in Headers */ = {isa = PBXBuildFile; fileRef = EEA512C41372A4320092A7DA /* MGTemplateStandardMarkers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EE89C3A813A9F0AA004C1FB9 /* NSArray+MGExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = EEA512C61372A4320092A7DA /* NSArray+MGExtensions.h */; settings = {ATTRIBUTES = (); }; };
+		EE89C3A913A9F0AA004C1FB9 /* NSDictionary+MGExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = EEA512C81372A4320092A7DA /* NSDictionary+MGExtensions.h */; settings = {ATTRIBUTES = (); }; };
+		EE89C3AA13A9F0AA004C1FB9 /* RegexKitLite.h in Headers */ = {isa = PBXBuildFile; fileRef = EEA512CA1372A4320092A7DA /* RegexKitLite.h */; };
+		EE89C3AB13A9F0C7004C1FB9 /* ICUTemplateMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA512BC1372A4320092A7DA /* ICUTemplateMatcher.m */; };
+		EE89C3AC13A9F0C7004C1FB9 /* MGTemplateEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA512BF1372A4320092A7DA /* MGTemplateEngine.m */; };
+		EE89C3AD13A9F0C7004C1FB9 /* MGTemplateStandardFilters.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA512C31372A4320092A7DA /* MGTemplateStandardFilters.m */; };
+		EE89C3AE13A9F0C7004C1FB9 /* MGTemplateStandardMarkers.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA512C51372A4320092A7DA /* MGTemplateStandardMarkers.m */; };
+		EE89C3AF13A9F0C7004C1FB9 /* NSArray+MGExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA512C71372A4320092A7DA /* NSArray+MGExtensions.m */; };
+		EE89C3B013A9F0C7004C1FB9 /* NSDictionary+MGExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA512C91372A4320092A7DA /* NSDictionary+MGExtensions.m */; };
+		EE89C3B113A9F0C7004C1FB9 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA512CB1372A4320092A7DA /* RegexKitLite.m */; };
+		EE89C3B213A9F0EF004C1FB9 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA512DD1372A44F0092A7DA /* libicucore.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE89C39F13A9F064004C1FB9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEA5129C1372A3FC0092A7DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE89C39213A9EF9A004C1FB9;
+			remoteInfo = MGKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EE89C39313A9EF9A004C1FB9 /* MGKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MGKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEA512A91372A3FC0092A7DA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		EEA512AC1372A3FC0092A7DA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		EEA512AD1372A3FC0092A7DA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		EEA512AE1372A3FC0092A7DA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EEA512B11372A3FC0092A7DA /* MGKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MGKit-Info.plist"; sourceTree = "<group>"; };
+		EEA512B51372A3FC0092A7DA /* MGKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MGKit-Prefix.pch"; sourceTree = "<group>"; };
+		EEA512BB1372A4320092A7DA /* ICUTemplateMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICUTemplateMatcher.h; sourceTree = "<group>"; };
+		EEA512BC1372A4320092A7DA /* ICUTemplateMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICUTemplateMatcher.m; sourceTree = "<group>"; };
+		EEA512BD1372A4320092A7DA /* MGKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGKit.h; sourceTree = "<group>"; };
+		EEA512BE1372A4320092A7DA /* MGTemplateEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTemplateEngine.h; sourceTree = "<group>"; };
+		EEA512BF1372A4320092A7DA /* MGTemplateEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGTemplateEngine.m; sourceTree = "<group>"; };
+		EEA512C01372A4320092A7DA /* MGTemplateFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTemplateFilter.h; sourceTree = "<group>"; };
+		EEA512C11372A4320092A7DA /* MGTemplateMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTemplateMarker.h; sourceTree = "<group>"; };
+		EEA512C21372A4320092A7DA /* MGTemplateStandardFilters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTemplateStandardFilters.h; sourceTree = "<group>"; };
+		EEA512C31372A4320092A7DA /* MGTemplateStandardFilters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGTemplateStandardFilters.m; sourceTree = "<group>"; };
+		EEA512C41372A4320092A7DA /* MGTemplateStandardMarkers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTemplateStandardMarkers.h; sourceTree = "<group>"; };
+		EEA512C51372A4320092A7DA /* MGTemplateStandardMarkers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGTemplateStandardMarkers.m; sourceTree = "<group>"; };
+		EEA512C61372A4320092A7DA /* NSArray+MGExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MGExtensions.h"; sourceTree = "<group>"; };
+		EEA512C71372A4320092A7DA /* NSArray+MGExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MGExtensions.m"; sourceTree = "<group>"; };
+		EEA512C81372A4320092A7DA /* NSDictionary+MGExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+MGExtensions.h"; sourceTree = "<group>"; };
+		EEA512C91372A4320092A7DA /* NSDictionary+MGExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+MGExtensions.m"; sourceTree = "<group>"; };
+		EEA512CA1372A4320092A7DA /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
+		EEA512CB1372A4320092A7DA /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
+		EEA512DD1372A44F0092A7DA /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE89C38F13A9EF9A004C1FB9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE89C39413A9EF9A004C1FB9 /* Cocoa.framework in Frameworks */,
+				EE89C3B213A9F0EF004C1FB9 /* libicucore.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EEA5129A1372A3FC0092A7DA = {
+			isa = PBXGroup;
+			children = (
+				EEA512AF1372A3FC0092A7DA /* MGKit */,
+				EEA512A81372A3FC0092A7DA /* Frameworks */,
+				EEA512A71372A3FC0092A7DA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EEA512A71372A3FC0092A7DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE89C39313A9EF9A004C1FB9 /* MGKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EEA512A81372A3FC0092A7DA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EEA512DD1372A44F0092A7DA /* libicucore.dylib */,
+				EEA512A91372A3FC0092A7DA /* Cocoa.framework */,
+				EEA512AB1372A3FC0092A7DA /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EEA512AB1372A3FC0092A7DA /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EEA512AC1372A3FC0092A7DA /* AppKit.framework */,
+				EEA512AD1372A3FC0092A7DA /* CoreData.framework */,
+				EEA512AE1372A3FC0092A7DA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		EEA512AF1372A3FC0092A7DA /* MGKit */ = {
+			isa = PBXGroup;
+			children = (
+				EEA512BB1372A4320092A7DA /* ICUTemplateMatcher.h */,
+				EEA512BC1372A4320092A7DA /* ICUTemplateMatcher.m */,
+				EEA512BD1372A4320092A7DA /* MGKit.h */,
+				EEA512BE1372A4320092A7DA /* MGTemplateEngine.h */,
+				EEA512BF1372A4320092A7DA /* MGTemplateEngine.m */,
+				EEA512C01372A4320092A7DA /* MGTemplateFilter.h */,
+				EEA512C11372A4320092A7DA /* MGTemplateMarker.h */,
+				EEA512C21372A4320092A7DA /* MGTemplateStandardFilters.h */,
+				EEA512C31372A4320092A7DA /* MGTemplateStandardFilters.m */,
+				EEA512C41372A4320092A7DA /* MGTemplateStandardMarkers.h */,
+				EEA512C51372A4320092A7DA /* MGTemplateStandardMarkers.m */,
+				EEA512C61372A4320092A7DA /* NSArray+MGExtensions.h */,
+				EEA512C71372A4320092A7DA /* NSArray+MGExtensions.m */,
+				EEA512C81372A4320092A7DA /* NSDictionary+MGExtensions.h */,
+				EEA512C91372A4320092A7DA /* NSDictionary+MGExtensions.m */,
+				EEA512CA1372A4320092A7DA /* RegexKitLite.h */,
+				EEA512CB1372A4320092A7DA /* RegexKitLite.m */,
+				EEA512B01372A3FC0092A7DA /* Supporting Files */,
+			);
+			path = MGKit;
+			sourceTree = "<group>";
+		};
+		EEA512B01372A3FC0092A7DA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EEA512B11372A3FC0092A7DA /* MGKit-Info.plist */,
+				EEA512B51372A3FC0092A7DA /* MGKit-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		EE89C39013A9EF9A004C1FB9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE89C3A213A9F0AA004C1FB9 /* MGKit.h in Headers */,
+				EE89C3A313A9F0AA004C1FB9 /* MGTemplateEngine.h in Headers */,
+				EE89C3A413A9F0AA004C1FB9 /* MGTemplateFilter.h in Headers */,
+				EE89C3A513A9F0AA004C1FB9 /* MGTemplateMarker.h in Headers */,
+				EE89C3A613A9F0AA004C1FB9 /* MGTemplateStandardFilters.h in Headers */,
+				EE89C3A713A9F0AA004C1FB9 /* MGTemplateStandardMarkers.h in Headers */,
+				EE89C3A113A9F0AA004C1FB9 /* ICUTemplateMatcher.h in Headers */,
+				EE89C3AA13A9F0AA004C1FB9 /* RegexKitLite.h in Headers */,
+				EE89C3A813A9F0AA004C1FB9 /* NSArray+MGExtensions.h in Headers */,
+				EE89C3A913A9F0AA004C1FB9 /* NSDictionary+MGExtensions.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		EE89C39213A9EF9A004C1FB9 /* MGKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE89C39C13A9EF9A004C1FB9 /* Build configuration list for PBXNativeTarget "MGKit" */;
+			buildPhases = (
+				EE89C38E13A9EF9A004C1FB9 /* Sources */,
+				EE89C38F13A9EF9A004C1FB9 /* Frameworks */,
+				EE89C39013A9EF9A004C1FB9 /* Headers */,
+				EE89C39113A9EF9A004C1FB9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MGKit;
+			productName = MGKit;
+			productReference = EE89C39313A9EF9A004C1FB9 /* MGKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EEA5129C1372A3FC0092A7DA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = n/a;
+			};
+			buildConfigurationList = EEA5129F1372A3FC0092A7DA /* Build configuration list for PBXProject "MGKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EEA5129A1372A3FC0092A7DA;
+			productRefGroup = EEA512A71372A3FC0092A7DA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EEA512E01372A5050092A7DA /* MGKit-Install */,
+				EE89C39213A9EF9A004C1FB9 /* MGKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE89C39113A9EF9A004C1FB9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EEA512FC1372A68F0092A7DA /* Install Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Install Framework";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "PRODUCT_FILE=$PRODUCT_NAME.framework\nPRODUCT_DIR=$TARGET_BUILD_DIR\nINSTALL_DIR=/Users/robertjpayne/Library/Frameworks\n#BRIDGE_SUPPORT_DIR=\"$PRODUCT_DIR/$PRODUCT_FILE/Resources/BridgeSupport\"\n#mkdir -p \"$BRIDGE_SUPPORT_DIR\"\n#gen_bridge_metadata -o \"$BRIDGE_SUPPORT_DIR/$PRODUCT_NAME.bridgesupport\" -f \"$PRODUCT_DIR/$PRODUCT_FILE\"\nif [[ -d \"$INSTALL_DIR/$PRODUCT_FILE\" ]]; then\n    rm -fr \"$INSTALL_DIR/$PRODUCT_FILE\"\nfi;\ncp -R \"$PRODUCT_DIR/$PRODUCT_FILE\" \"$INSTALL_DIR/\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE89C38E13A9EF9A004C1FB9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE89C3AB13A9F0C7004C1FB9 /* ICUTemplateMatcher.m in Sources */,
+				EE89C3AC13A9F0C7004C1FB9 /* MGTemplateEngine.m in Sources */,
+				EE89C3AD13A9F0C7004C1FB9 /* MGTemplateStandardFilters.m in Sources */,
+				EE89C3AE13A9F0C7004C1FB9 /* MGTemplateStandardMarkers.m in Sources */,
+				EE89C3AF13A9F0C7004C1FB9 /* NSArray+MGExtensions.m in Sources */,
+				EE89C3B013A9F0C7004C1FB9 /* NSDictionary+MGExtensions.m in Sources */,
+				EE89C3B113A9F0C7004C1FB9 /* RegexKitLite.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE89C3A013A9F064004C1FB9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE89C39213A9EF9A004C1FB9 /* MGKit */;
+			targetProxy = EE89C39F13A9F064004C1FB9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EE89C39D13A9EF9A004C1FB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_OBJCPP_ARC_ABI = NO;
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MGKit/MGKit-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MGKit/MGKit-Info.plist";
+				LD_DYLIB_INSTALL_NAME = "@loader_path/../Frameworks/$(EXECUTABLE_PATH)";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = x86_64;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		EE89C39E13A9EF9A004C1FB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_OBJCPP_ARC_ABI = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MGKit/MGKit-Prefix.pch";
+				INFOPLIST_FILE = "MGKit/MGKit-Info.plist";
+				LD_DYLIB_INSTALL_NAME = "@loader_path/../Frameworks/$(EXECUTABLE_PATH)";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = x86_64;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		EEA512B61372A3FC0092A7DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		EEA512B71372A3FC0092A7DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		EEA512E21372A5050092A7DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = MGKit;
+			};
+			name = Debug;
+		};
+		EEA512E31372A5050092A7DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = MGKit;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE89C39C13A9EF9A004C1FB9 /* Build configuration list for PBXNativeTarget "MGKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE89C39D13A9EF9A004C1FB9 /* Debug */,
+				EE89C39E13A9EF9A004C1FB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEA5129F1372A3FC0092A7DA /* Build configuration list for PBXProject "MGKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEA512B61372A3FC0092A7DA /* Debug */,
+				EEA512B71372A3FC0092A7DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEA512E11372A5050092A7DA /* Build configuration list for PBXAggregateTarget "MGKit-Install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEA512E21372A5050092A7DA /* Debug */,
+				EEA512E31372A5050092A7DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EEA5129C1372A3FC0092A7DA /* Project object */;
+}

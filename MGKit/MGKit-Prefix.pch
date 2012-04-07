@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'MGKit' target in the 'MGKit' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
