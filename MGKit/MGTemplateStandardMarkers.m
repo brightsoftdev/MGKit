@@ -19,10 +19,13 @@
 
 #define FOR_LOOP_VARS					@"currentLoop"
 #define FOR_LOOP_CURR_INDEX				@"currentIndex"
+#define FOR_LOOP_CURR_INDEX1			@"currentIndex1"
 #define FOR_LOOP_START_INDEX			@"startIndex"
+#define FOR_LOOP_START_INDEX1			@"startIndex1"
 #define FOR_LOOP_END_INDEX				@"endIndex"
+#define FOR_LOOP_END_INDEX1				@"endIndex1"
 #define FOR_LOOP_FIRST					@"first"
-#define FOR_LOOP_LAST						@"last"
+#define FOR_LOOP_LAST					@"last"
 #define FOR_PARENT_LOOP					@"parentLoop"
 
 #define STACK_START_MARKER_RANGE		@"markerRange"
@@ -160,7 +163,7 @@
 			BOOL valid = NO;
 			NSString *startArg = [args objectAtIndex:0];
 			NSString *endArg = [args objectAtIndex:2];
-			int startIndex, endIndex;
+			int startIndex, endIndex, startIndex1, endIndex1;
 			if (isRange) {
 				// Check to see if either the arg itself is numeric, or it corresponds to a numeric variable.
 				valid = [self argIsNumeric:startArg intValue:&startIndex checkVariables:YES];
@@ -171,13 +174,17 @@
 						valid = (startIndex <= endIndex);
 					}
 				}
+				startIndex1 = startIndex;
+				endIndex1 = endIndex;
 			} else {
 				startIndex = 0;
+				startIndex1 = 1;
 				
 				// Check that endArg is a collection.
 				NSObject *obj = [engine resolveVariable:endArg];
 				if (obj && [obj respondsToSelector:@selector(objectEnumerator)] && [obj respondsToSelector:@selector(count)]) {
 					endIndex = [(NSArray *)obj count] - 1;
+					endIndex1 = endIndex + 1;
 					if (endIndex > 0) {
 						loopEnumObject = obj;
 						valid = YES;
@@ -197,10 +204,14 @@
 				
 				// Set up variables for the block.
 				int currentIndex = (reversed) ? endIndex : startIndex;
+				int currentIndex1 = (reversed) ? endIndex1 : startIndex1;
 				NSMutableDictionary *loopVars = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-												 [NSNumber numberWithInt:startIndex], FOR_LOOP_START_INDEX, 
+												 [NSNumber numberWithInt:startIndex], FOR_LOOP_START_INDEX,
+												 [NSNumber numberWithInt:startIndex1], FOR_LOOP_START_INDEX1,
 												 [NSNumber numberWithInt:endIndex], FOR_LOOP_END_INDEX, 
+												 [NSNumber numberWithInt:endIndex1], FOR_LOOP_END_INDEX1, 
 												 [NSNumber numberWithInt:currentIndex], FOR_LOOP_CURR_INDEX,
+												 [NSNumber numberWithInt:currentIndex1], FOR_LOOP_CURR_INDEX1,
 												 [NSNumber numberWithBool:currentIndex == startIndex], FOR_LOOP_FIRST,
 												 [NSNumber numberWithBool:currentIndex == endIndex], FOR_LOOP_LAST,
 												 [NSNumber numberWithBool:reversed], FOR_REVERSE,
@@ -270,7 +281,8 @@
 			NSEnumerator *loopEnum = [frame objectForKey:FOR_STACK_ENUMERATOR];
 			NSObject *newEnumValue = nil;
 			int currentIndex = [[loopVars objectForKey:FOR_LOOP_CURR_INDEX] intValue];
-			int startIndex = [[loopVars objectForKey:FOR_LOOP_START_INDEX] intValue];
+			int currentIndex1 = [[loopVars objectForKey:FOR_LOOP_CURR_INDEX1] intValue];
+			int startIndex = [[loopVars objectForKey:FOR_LOOP_START_INDEX] intValue]; 
 			int endIndex = [[loopVars objectForKey:FOR_LOOP_END_INDEX] intValue];
 			if (loopEnum) {
 				// Enumerator type.
@@ -300,10 +312,13 @@
 				// Set new currentIndex
 				if (reversed) {
 					currentIndex--;
+					currentIndex1--;
 				} else {
 					currentIndex++;
+					currentIndex1++;
 				}
 				[loopVars setObject:[NSNumber numberWithInt:currentIndex] forKey:FOR_LOOP_CURR_INDEX];
+				[loopVars setObject:[NSNumber numberWithInt:currentIndex1] forKey:FOR_LOOP_CURR_INDEX1];
 				[loopVars setObject:[NSNumber numberWithBool:currentIndex == startIndex] forKey:FOR_LOOP_FIRST];
 				[loopVars setObject:[NSNumber numberWithBool:currentIndex == endIndex] forKey:FOR_LOOP_LAST];
 				
